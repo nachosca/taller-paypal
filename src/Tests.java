@@ -8,9 +8,9 @@ import java.util.List;
 public class Tests {
 
     @Test
-    public void myTest1(){
+    public void myTest1() {
 
-        int[] array = {1,-2,3,-4,5,-6,7,-8,9,-10,11,-12};
+        int[] array = {1, -2, 3, -4, 5, -6, 7, -8, 9, -10, 11, -12};
         final List<Integer[]> result = Main.fourNumberSum(array, -1);
 
         final List<Integer[]> expected = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Tests {
         expected.add(expected3);
 
 
-        Assert.assertTrue(result.size() == expected.size());
+        Assert.assertEquals(result.size(), expected.size());
 
         Assert.assertTrue(result.stream().anyMatch(res -> {
             Arrays.sort(res);
@@ -45,9 +45,9 @@ public class Tests {
     }
 
     @Test
-    public void myTest2(){
+    public void myTest2() {
 
-        int[] array = {1,-2,3,-4,5,-6,7,-8,9,-10};
+        int[] array = {1, -2, 3, -4, 5, -6, 7, -8, 9, -10};
         final List<Integer[]> result = Main.fourNumberSum(array, 1);
 
         final List<Integer[]> expected = new ArrayList<>();
@@ -58,7 +58,7 @@ public class Tests {
         expected.add(expected2);
 
 
-        Assert.assertTrue(result.size() == expected.size());
+        Assert.assertEquals(result.size(), expected.size());
 
         Assert.assertTrue(result.stream().anyMatch(res -> {
             Arrays.sort(res);
@@ -75,9 +75,8 @@ public class Tests {
     }
 
 
-
     @Test
-    public void test1(){
+    public void test1() {
 
         int[] array = {7, 6, 4, -1, 1, 2};
         final List<Integer[]> result = Main.fourNumberSum(array, 16);
@@ -89,7 +88,7 @@ public class Tests {
         expected.add(expected1);
         expected.add(expected2);
 
-        Assert.assertTrue(result.size() == expected.size());
+        Assert.assertEquals(result.size(), expected.size());
 
         Assert.assertTrue(result.stream().anyMatch(res -> {
             Arrays.sort(res);
@@ -106,7 +105,7 @@ public class Tests {
 
 
     @Test
-    public void test2(){
+    public void test2() {
 
         int[] array = {1, 2, 3, 4, 5, 6, 7};
         final List<Integer[]> result = Main.fourNumberSum(array, 10);
@@ -116,7 +115,7 @@ public class Tests {
 
         expected.add(expected1);
 
-        Assert.assertTrue(result.size() == expected.size());
+        Assert.assertEquals(result.size(), expected.size());
 
         Assert.assertTrue(result.stream().anyMatch(res -> {
             Arrays.sort(res);
@@ -134,12 +133,12 @@ public class Tests {
 
         final List<Integer[]> expected = new ArrayList<>();
 
-        Assert.assertTrue(result.size() == expected.size());
+        Assert.assertEquals(result.size(), expected.size());
     }
 
 
     @Test
-    public void test4(){
+    public void test4() {
 
         int[] array = {-2, -1, 1, 2, 3, 4, 5, 6, 7, 8, 9};
         final List<Integer[]> result = Main.fourNumberSum(array, 4);
@@ -153,9 +152,9 @@ public class Tests {
         expected.add(expected1);
         expected.add(expected2);
         expected.add(expected3);
-        expected.add(expected4);;
+        expected.add(expected4);
 
-        Assert.assertTrue(result.size() == expected.size());
+        Assert.assertEquals(result.size(), expected.size());
 
         Assert.assertTrue(result.stream().anyMatch(res -> {
             Arrays.sort(res);
